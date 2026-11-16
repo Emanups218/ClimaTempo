@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempo Flash</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontes do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-default">
+    <!-- Animações de fundo -->
+    <div id="clouds-container"></div>
+    <div class="city-skyline"></div>
+
+    <main class="container">
+        <header>
+            <h1>⚡ Tempo Flash</h1>
+            <p>Descubra o clima em qualquer cidade do mundo</p>
+        </header>
+
+        <section class="search-box">
+            <input type="text" id="city-input" placeholder="Digite o nome da cidade..." autocomplete="off">
+            <button id="search-btn">Buscar</button>
+        </section>
+
+        <!-- Mensagem de carregamento -->
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Buscando dados climáticos...</p>
+        </div>
+
+        <!-- Mensagem de erro -->
+        <div id="error-message" class="hidden">
+            <p>❌ Cidade não encontrada. Tente novamente.</p>
+        </div>
+
+        <!-- Cartão de Clima (Oculto até a busca) -->
+        <div id="weather-card" class="hidden">
+            <h2 id="location-name">Cidade, Estado</h2>
+            <h3 id="country-name">País</h3>
+            
+            <div class="weather-main">
+                <div id="weather-icon">☀️</div>
+                <div class="temp-wrapper">
+                    <h1 id="temperature">--°C</h1>
+                    <p id="weather-description">Condição</p>
+                </div>
+            </div>
+
+            <div class="weather-details">
+                <div class="detail">
+                    <span>Sensação</span>
+                    <strong id="feels-like">--°C</strong>
+                </div>
+                <div class="detail">
+                    <span>Umidade</span>
+                    <strong id="humidity">--%</strong>
+                </div>
+                <div class="detail">
+                    <span>Vento</span>
+                    <strong id="wind-speed">-- km/h</strong>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
